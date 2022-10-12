@@ -17,12 +17,13 @@ export const Title = styled.h2`
     font-weight: bold;
     font-size: 22px;
 `
+
 export const List = styled.ul`
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
-    justify-content: space-between;
+    display: flex;    
+    flex-wrap: wrap;
     min-width: 100%;
 `
 
@@ -30,9 +31,9 @@ export const ListItem = styled.li`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;    
-    padding: 20px 0;
-    width: calc(100%/3);    
+    justify-content: space-between;
+    padding: 20px 0;    
+    width: calc(100%/5);
     background-color: ${getRandomHexColor};    
 
     :not(:first-child) {        
@@ -40,10 +41,12 @@ export const ListItem = styled.li`
     };
 
     :first-child {
-        border-bottom-left-radius: 5px;        
+        ${props => !props.title && "border-top-left-radius: 5px;"}
+        border-bottom-left-radius: 5px;
     }
 
     :last-child {
+        ${props => !props.title && "border-top-right-radius: 5px;"}
         border-bottom-right-radius: 5px;
     }
 `

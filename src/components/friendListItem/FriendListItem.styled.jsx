@@ -17,8 +17,9 @@ export const Status = styled.span`
     margin-right: 15px;
     min-width: 15px;
     height: 15px;
-    background-color: #4FEA29;
     border-radius: 50%;
+    background-color: ${props => props.isOnline? '#4FEA29' : '#F08404'};
+    
 `
 
 export const Avatar = styled.img`

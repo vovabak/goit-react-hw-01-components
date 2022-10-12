@@ -1,4 +1,4 @@
-import { FriendListItem } from '../friendListItem/FriendListItem'
+import { FriendListItem } from '../friendListItem'
 import { List } from './FriendList.styled';
 import PropTypes from 'prop-types';
 

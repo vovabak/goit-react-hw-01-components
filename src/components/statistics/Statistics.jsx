@@ -5,10 +5,11 @@ export const Statistics = ({ stats, title = null }) => {
     
     return (        
         <StatisticsSection>
-            <Title>{title}</Title>
-
+            { title && 
+                <Title>{title}</Title>
+            }
             <List>
-                {stats.map(({id, label, percentage}) => <ListItem key={id}>
+                {stats.map(({id, label, percentage}) => <ListItem title={title} key={id}>
                     <Label>{label}</Label>
                     <Percentage>{percentage}%</Percentage>
                 </ListItem>)
