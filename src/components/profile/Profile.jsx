@@ -1,34 +1,35 @@
 import PropTypes from 'prop-types';
+import { ProfileContainer, ProfileInfo, ProfileAvatar, ProfileName, ProfileTag, ProfileLocation, ProfileStats, ProfileStatsItem, StatsLabel, StatsQuantity } from './Profile.styled';
+
 
 export const Profile = ({ username, tag, location, avatar, followers, views, likes }) => {   
 
     return (
-        <div>
-            <div>
-                <img
+        <ProfileContainer>
+            <ProfileInfo>
+                <ProfileAvatar
                     src={avatar}
-                    alt={username}
-                     width="48"
+                    alt={username}                     
                 />
-                <p>{username}</p>
-                <p>@{tag}</p>
-                <p>{location}</p>
-            </div>
-            <ul>
-                <li>
-                    <span>Followers</span>
-                    <span>{followers}</span>
-                </li>
-                <li>
-                    <span>Views</span>
-                    <span>{views}</span>
-                </li>
-                <li>
-                    <span>Likes</span>
-                    <span>{likes}</span>
-                </li>
-            </ul>
-        </div>
+                <ProfileName>{username}</ProfileName>
+                <ProfileTag>@{tag}</ProfileTag>
+                <ProfileLocation>{location}</ProfileLocation>
+            </ProfileInfo>
+            <ProfileStats>
+                <ProfileStatsItem>
+                    <StatsLabel>Followers</StatsLabel>
+                    <StatsQuantity>{followers}</StatsQuantity>
+                </ProfileStatsItem>
+                <ProfileStatsItem>
+                    <StatsLabel>Views</StatsLabel>
+                    <StatsQuantity>{views}</StatsQuantity>
+                </ProfileStatsItem>
+                <ProfileStatsItem>
+                    <StatsLabel>Likes</StatsLabel>
+                    <StatsQuantity>{likes}</StatsQuantity>
+                </ProfileStatsItem>
+            </ProfileStats>
+        </ProfileContainer>
     )
 }
 

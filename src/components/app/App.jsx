@@ -6,13 +6,14 @@ import userData from '../user.json';
 import statsData from '../data.json';
 import friends from '../friends.json';
 import transactions from '../transactions.json';
+import { Container } from './App.styled';
 
 export const App = () => {
 
   const { username, tag, location, avatar, stats: { followers, views, likes } } = userData;
 
   return (
-    <>
+    <Container>
       <Profile
           username={username}
           tag={tag}
@@ -32,6 +33,6 @@ export const App = () => {
       <TransactionHistory
           items={transactions}
       />
-    </>
+    </Container>
   );
 };
