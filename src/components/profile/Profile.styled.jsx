@@ -20,7 +20,7 @@ export const ProfileAvatar = styled.img`
     width: 50%;
     height: auto;
     border-radius: 50%;
-    background-color: #F4F4F4;    
+    background-color: #F4F4F4;
 `
 
 export const ProfileName = styled.p`

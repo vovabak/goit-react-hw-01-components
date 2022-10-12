@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import getRandomHexColor from '../../utils/getRandomHexColor';
 
 export const StatisticsSection = styled.section`
     display: flex;
@@ -56,9 +57,3 @@ export const Percentage = styled.span`
     font-weight: bold;
     font-size: 16px;
 `
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}

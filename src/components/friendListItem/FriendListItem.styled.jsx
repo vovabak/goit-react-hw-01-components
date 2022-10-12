@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ListItem = styled.li`    
     display: flex;
@@ -26,4 +26,9 @@ export const Avatar = styled.img`
     margin-right: 25px;
     width: 50px;
     height: auto;
+`
+
+export const Name = styled.p`
+    font-weight: bold;
+    font-size: 16px;
 `
