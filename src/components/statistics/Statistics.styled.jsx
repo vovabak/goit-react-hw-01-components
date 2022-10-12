@@ -32,16 +32,14 @@ export const ListItem = styled.li`
     justify-content: space-between;    
     padding: 20px 0;
     width: calc(100%/3);    
-    background-color: ${getRandomHexColor};
-    border-color: rgba(190, 190, 185, 0.45);
+    background-color: ${getRandomHexColor};    
 
     :not(:first-child) {        
         box-shadow: 0px 5px 5px rgba(190, 190, 185, 0.45); 
     };
 
     :first-child {
-        border-bottom-left-radius: 5px;
-        {}
+        border-bottom-left-radius: 5px;        
     }
 
     :last-child {

@@ -9,7 +9,7 @@ export const ProfileContainer = styled.div`
     max-width: 90%;
     border-radius: 5px;
     background-color: #FFF;
-    box-shadow: 5px 5px 5px rgba(190, 190, 185, 0.45);    
+    box-shadow: 5px 5px 5px rgba(190, 190, 185, 0.45);
 `
 
 export const ProfileInfo = styled.div`        
@@ -18,6 +18,7 @@ export const ProfileInfo = styled.div`
 
 export const ProfileAvatar = styled.img`
     width: 50%;
+    height: auto;
     border-radius: 50%;
     background-color: #F4F4F4;    
 `
@@ -59,7 +60,7 @@ export const ProfileStatsItem = styled.li`
     justify-content: space-between;    
     padding: 20px 0;
     width: calc(100%/3);    
-    background-color: #F4F4F4;    
+    background-color: #F4F4F4;
 
     :not(:first-child) {
         box-shadow: 0px 5px 5px rgba(190, 190, 185, 0.45);
